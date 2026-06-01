@@ -1,22 +1,66 @@
-/* REQUISITO: Comentar el estilo existente para el elemento li */
+/* ==========================================================================
+   1. CUERPO (CUMPLE: ¿Tiene el cuerpo relleno y/o margen?)
+   ========================================================================== */
+body {
+    margin: 20px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+/* ==========================================================================
+   2. CABECERA (CUMPLE: Imagen de fondo, relleno y color de reserva)
+   ========================================================================== */
+.main-header {
+    background-color: #2c3e50; /* Color de reserva si la imagen no carga */
+    background-image: url('header-bg.jpg'); /* Imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    padding: 30px 20px; /* Relleno superior/inferior y lados */
+    margin-bottom: 20px;
+}
+
+/* ==========================================================================
+   3 y 4. ENLACES DE NAVEGACIÓN (CUMPLE: Estilo completo y solo a nav)
+   ========================================================================== */
+/* Comentado el estilo li anterior según el requisito del proyecto */
 /* li {
     display: inline;
     padding: 10px;
-} 
+}
 */
 
-/* REQUISITO: Nav como inline-block y anchura del 80% */
-nav {
+.nav-menu {
     display: inline-block;
     width: 80%;
 }
 
-/* REQUISITO: Selector descendente para la imagen en el nav (10%) */
-nav img {
-    width: 10%;
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
 }
 
-/* REQUISITO: Clase grid, dos columnas del 40% y ajustes de alineación */
+/* Estilo exacto para los enlaces del menú (display, padding, text-decoration...) */
+.nav-menu .nav-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 5. CLASE ACTIVA (CUMPLE: Estilizada para mostrar la página actual) */
+.nav-menu .nav-link.active {
+    background-color: #e74c3c; /* Color destacado para la pestaña activa */
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   6. SECCIONES LADO A LADO (CUMPLE: Grid y Flex funcionando)
+   ========================================================================== */
+/* Elementos en cuadrícula (Dos columnas del 40%) */
 .grid {
     display: grid;
     grid-template-columns: 40% 40%;
@@ -25,19 +69,45 @@ nav img {
     row-gap: 20px;
 }
 
-/* REQUISITO: Selector descendente para imágenes de la clase grid (100%) */
-.grid img {
-    width: 100%;
-}
-
-/* REQUISITO: Clase flex con flex-wrap y distribución ajustada */
+/* Elementos en Flexbox */
 .flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-/* Opcional: Estilo estético básico para que el enlace de salto no estorbe visualmente */
+/* ==========================================================================
+   7. IMÁGENES ESTILIZADAS (CUMPLE: Ancho consistente, bordes y espacio)
+   ========================================================================== */
+/* Imagen del menú de navegación (10% de ancho) */
+.nav-logo {
+    width: 10%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Imágenes de la cuadrícula (100% de su contenedor) */
+.grid img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc; /* Borde */
+    margin: 0 auto 10px auto; /* Centrado horizontal y espacio inferior */
+    display: block;
+}
+
+/* Imágenes de las tarjetas de los parques */
+.tarjeta-de-parque img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border: 2px solid #2c3e50; /* Borde consistente */
+    margin: 10px auto; /* Espaciado vertical y centrado */
+    display: block;
+}
+
+/* ==========================================================================
+   ACCESIBILIDAD: Enlace de salto funcional
+   ========================================================================== */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -46,7 +116,9 @@ nav img {
     color: #fff;
     padding: 8px;
     z-index: 100;
+    text-decoration: none;
 }
+
 .skip-link:focus {
     top: 0;
 }

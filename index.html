@@ -10,13 +10,13 @@
 
     <a href="#contenido-principal" class="skip-link">Saltar al contenido principal</a>
 
-    <header>
-        <nav>
-            <img src="logo.png" alt="Logotipo del sitio">
+    <header class="main-header">
+        <nav class="nav-menu">
+            <img src="logo.png" alt="Logotipo del sitio" class="nav-logo">
             <ul>
-                <li>Inicio</li>
-                <li>Parques</li>
-                <li>Contacto</li>
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="parks.html" class="nav-link">Parques</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -25,11 +25,11 @@
         
         <h2>Galería en Cuadrícula</h2>
         <section class="grid">
-            <div>
+            <div class="grid-item">
                 <img src="imagen-grid-1.jpg" alt="Elemento de la rejilla 1">
                 <h3>Destino A</h3>
             </div>
-            <div>
+            <div class="grid-item">
                 <img src="imagen-grid-2.jpg" alt="Elemento de la rejilla 2">
                 <h3>Destino B</h3>
             </div>
@@ -39,11 +39,11 @@
 
         <h2>Nuestros Parques</h2>
         <section class="flex">
-            <div class="park-card">
+            <div class="tarjeta-de-parque">
                 <img src="parque-1.jpg" alt="Parque Natural 1">
                 <p>Información detallada del primer parque nacional.</p>
             </div>
-            <div class="park-card">
+            <div class="tarjeta-de-parque">
                 <img src="parque-2.jpg" alt="Parque Natural 2">
                 <p>Información detallada del segundo parque nacional.</p>
             </div>
