@@ -1,34 +1,21 @@
-/* ==========================================================================
-   1. CUERPO (CUMPLE: ¿Tiene el cuerpo relleno y/o margen?)
-   ========================================================================== */
+/* 1. CUERPO */
 body {
     margin: 20px;
     padding: 10px;
     font-family: Arial, sans-serif;
 }
 
-/* ==========================================================================
-   2. CABECERA (CUMPLE: Imagen de fondo, relleno y color de reserva)
-   ========================================================================== */
+/* 2. CABECERA */
 .main-header {
-    background-color: #2c3e50; /* Color de reserva si la imagen no carga */
-    background-image: url('header-bg.jpg'); /* Imagen de fondo */
+    background-color: #2c3e50;
+    background-image: url('header-bg.jpg');
     background-size: cover;
     background-position: center;
-    padding: 30px 20px; /* Relleno superior/inferior y lados */
+    padding: 30px 20px;
     margin-bottom: 20px;
 }
 
-/* ==========================================================================
-   3 y 4. ENLACES DE NAVEGACIÓN (CUMPLE: Estilo completo y solo a nav)
-   ========================================================================== */
-/* Comentado el estilo li anterior según el requisito del proyecto */
-/* li {
-    display: inline;
-    padding: 10px;
-}
-*/
-
+/* 3 y 4. ENLACES DE NAVEGACIÓN */
 .nav-menu {
     display: inline-block;
     width: 80%;
@@ -40,7 +27,6 @@ body {
     display: inline-flex;
 }
 
-/* Estilo exacto para los enlaces del menú (display, padding, text-decoration...) */
 .nav-menu .nav-link {
     display: inline-block;
     padding: 10px 15px;
@@ -51,16 +37,13 @@ body {
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-/* 5. CLASE ACTIVA (CUMPLE: Estilizada para mostrar la página actual) */
+/* 5. CLASE ACTIVA */
 .nav-menu .nav-link.active {
-    background-color: #e74c3c; /* Color destacado para la pestaña activa */
+    background-color: #e74c3c;
     font-weight: bold;
 }
 
-/* ==========================================================================
-   6. SECCIONES LADO A LADO (CUMPLE: Grid y Flex funcionando)
-   ========================================================================== */
-/* Elementos en cuadrícula (Dos columnas del 40%) */
+/* 6. SECCIONES LADO A LADO */
 .grid {
     display: grid;
     grid-template-columns: 40% 40%;
@@ -69,45 +52,37 @@ body {
     row-gap: 20px;
 }
 
-/* Elementos en Flexbox */
 .flex {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-/* ==========================================================================
-   7. IMÁGENES ESTILIZADAS (CUMPLE: Ancho consistente, bordes y espacio)
-   ========================================================================== */
-/* Imagen del menú de navegación (10% de ancho) */
+/* 7. IMÁGENES ESTILIZADAS */
 .nav-logo {
     width: 10%;
     height: auto;
     vertical-align: middle;
 }
 
-/* Imágenes de la cuadrícula (100% de su contenedor) */
 .grid img {
     width: 100%;
     height: auto;
-    border: 2px solid #ccc; /* Borde */
-    margin: 0 auto 10px auto; /* Centrado horizontal y espacio inferior */
+    border: 2px solid #ccc;
+    margin: 0 auto 10px auto;
     display: block;
 }
 
-/* Imágenes de las tarjetas de los parques */
 .tarjeta-de-parque img {
     width: 100%;
     max-width: 300px;
     height: auto;
-    border: 2px solid #2c3e50; /* Borde consistente */
-    margin: 10px auto; /* Espaciado vertical y centrado */
+    border: 2px solid #2c3e50;
+    margin: 10px auto;
     display: block;
 }
 
-/* ==========================================================================
-   ACCESIBILIDAD: Enlace de salto funcional
-   ========================================================================== */
+/* ACCESIBILIDAD */
 .skip-link {
     position: absolute;
     top: -40px;
