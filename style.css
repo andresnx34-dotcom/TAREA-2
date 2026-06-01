@@ -1,0 +1,52 @@
+/* REQUISITO: Comentar el estilo existente para el elemento li */
+/* li {
+    display: inline;
+    padding: 10px;
+} 
+*/
+
+/* REQUISITO: Nav como inline-block y anchura del 80% */
+nav {
+    display: inline-block;
+    width: 80%;
+}
+
+/* REQUISITO: Selector descendente para la imagen en el nav (10%) */
+nav img {
+    width: 10%;
+}
+
+/* REQUISITO: Clase grid, dos columnas del 40% y ajustes de alineación */
+.grid {
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 20px;
+}
+
+/* REQUISITO: Selector descendente para imágenes de la clase grid (100%) */
+.grid img {
+    width: 100%;
+}
+
+/* REQUISITO: Clase flex con flex-wrap y distribución ajustada */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Opcional: Estilo estético básico para que el enlace de salto no estorbe visualmente */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
